@@ -1,0 +1,480 @@
+{
+  "users": [
+    {
+      "name": "ADMIN 01",
+      "email": "admin1@gmail.com",
+      "phone": "9361672063",
+      "password": "admin1@123",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "name": "ADMIN 02",
+      "email": "admin2@gmail.com",
+      "phone": "9361672063",
+      "password": "admin2@123",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "name": "Arun Kumar",
+      "email": "karun1902002@gmail.com",
+      "phone": "9361672063",
+      "address": "abcd",
+      "password": "123@qwe",
+      "cpassword": "123@qwe",
+      "role": "user",
+      "id": 3
+    }
+  ],
+  "home": [
+    {
+      "category": "Shoulder",
+      "id": 1,
+      "title": "Shoulder Press",
+      "description": "Shoulder Press Machine, For Gym",
+      "price": "25500",
+      "discountprice": "19000",
+      "rating": "4.6  ",
+      "image": "/assets/shoulder/shoulderpress.png"
+    },
+    {
+      "id": 2,
+      "category": "Gymequipment",
+      "title": "Commercial Multi Gym",
+      "description": "Metal 418BA-Stella Light Commercial Multi Gym",
+      "price": " 140000",
+      "discountprice": "116000",
+      "rating": "4.6 ",
+      "image": "/assets/gymequipment/multigym.png"
+    },
+    {
+      "category": "Armexercise",
+      "id": 3,
+      "title": "Atlantis Biceps",
+      "description": "Atlantis-019 Biceps",
+      "price": "98999",
+      "discountprice": "92500",
+      "rating": "4.6  ",
+      "image": "/assets/armexercise/atlantisbiceps.png"
+    },
+    {
+      "category": "Treadmill",
+      "title": "Motorized Treadmill ",
+      "description": "Motorized Treadmill SOLO-500B, For Gym, Model Name/Number: Stairmill",
+      "price": "215000",
+      "discountprice": "175000",
+      "rating": "4. 4",
+      "image": "/assets/treadmill/motorized treadmill.png"
+    }
+  ],
+  "armexercise": [
+    {
+      "category": "Armexercise",
+      "title": "Atlantis Biceps",
+      "description": "Atlantis-019 Biceps",
+      "price": "98999",
+      "discountprice": "92500",
+      "rating": "4.6  ",
+      "image": "/assets/armexercise/atlantisbiceps.png",
+      "th1": "Weight Stack",
+      "th2": "Net Weight",
+      "th3": "Frame Guage",
+      "th4": "Seat",
+      "td1": "100 Kg",
+      "td2": "260 Kg",
+      "td3": "11 Guage",
+      "td4": "Honeycomb Foam (Anti-Fungus)",
+      "id": 1
+    },
+    {
+      "category": "Armexercise",
+      "title": "Single Station Biceps Curl",
+      "description": "Single Station Biceps Curl, for Gym",
+      "price": "55500",
+      "discountprice": "48000",
+      "rating": "4.8  ",
+      "image": "/assets/armexercise/single station biceps curl.png",
+      "th1": "Usage/Application",
+      "th2": "Surface Treatment",
+      "th3": "Seat Back Height",
+      "th4": "Weight Stack",
+      "td1": "Gym",
+      "td2": "Color Coated",
+      "td3": "3 Feet",
+      "td4": "100 Kgs",
+      "id": 2
+    },
+    {
+      "category": "Armexercise",
+      "title": "Forearm Wrist Curl",
+      "description": "Forearm Wrist Curl Machine, For Gym",
+      "price": "32000",
+      "discountprice": "22000",
+      "rating": "4.6 ",
+      "image": "/assets/armexercise/forearmwrist.png",
+      "th1": "Usage/Application",
+      "th2": "Features",
+      "th3": "Country of Origin",
+      "th4": "About This Item",
+      "td1": "Gym",
+      "td2": "Forearm rest pad allows comfortable and effective workout",
+      "td3": "Made in India",
+      "td4": "Vertical rod having little play to gain the proper grip",
+      "id": 3
+    },
+    {
+      "category": "Armexercise",
+      "title": "Bench Press",
+      "description": "SL7030 Decline Bench Press, For Gym",
+      "price": "95000",
+      "discountprice": "85925",
+      "rating": "4.5  ",
+      "image": "/assets/armexercise/bench press.png",
+      "th1": "Model Name/Number",
+      "th2": "Brand",
+      "th3": "Max. Load",
+      "th4": "Height",
+      "td1": "SL7030",
+      "td2": "Viva FItness",
+      "td3": "150 kg",
+      "td4": "131.5cm",
+      "id": 4
+    }
+  ],
+  "gymequipment": [
+    {
+      "category": "Gymequipment",
+      "title": "6 Station Multi Gym",
+      "description": "6 Station Multi Gym, Weight - 180 Kgs",
+      "price": "36500",
+      "discountprice": "35000",
+      "rating": "4.5  ",
+      "image": "/assets/gymequipment/six station multigym.png",
+      "th1": "Number Of Stations",
+      "th2": "Maximum Resistance",
+      "th3": "Features",
+      "th4": "Weight",
+      "td1": "6 Stations",
+      "td2": "150-200 lbs",
+      "td3": "Low maintenance,Durable",
+      "td4": "180 Kgs",
+      "id": 1
+    },
+    {
+      "category": "Gymequipment",
+      "title": "Weight Lifting Set",
+      "description": "Mild Steel 190 Kg Challenge Weight Lifting Set",
+      "price": " 75000",
+      "discountprice": "60500",
+      "rating": "4.2 ",
+      "image": "/assets/gymequipment/weight lifting.png",
+      "th1": "Usage",
+      "th2": "Material",
+      "th3": "Resistance Type",
+      "th4": "Weight",
+      "td1": "Weight Lifting",
+      "td2": "Mild Steel",
+      "td3": "Plate Load",
+      "td4": "190 Kg",
+      "id": 2
+    },
+    {
+      "category": "Gymequipment",
+      "title": "Commercial Multi Gym",
+      "description": "Metal 418BA-Stella Light Commercial Multi Gym",
+      "price": " 140000",
+      "discountprice": "116000",
+      "rating": "4.6 ",
+      "image": "/assets/gymequipment/multigym.png",
+      "th1": "Usage/Application",
+      "th2": "Number Of Stations",
+      "th3": "Material",
+      "th4": "Model No",
+      "td1": "Gym",
+      "td2": "6 Stations",
+      "td3": "Metal",
+      "td4": "418 BA STELLA",
+      "id": 3
+    },
+    {
+      "category": "Gymequipment",
+      "title": "Mild Steel Functional Trainer",
+      "description": "Mild Steel Functional Trainer Machine, For Gym",
+      "price": " 65000",
+      "discountprice": "58000",
+      "rating": "4.5 ",
+      "image": "/assets/gymequipment/mild steel functional.png",
+      "th1": "Usage",
+      "th2": "Material",
+      "th3": "Country of Origin",
+      "th4": "Cable Diameter",
+      "td1": "Gym",
+      "td2": "Mild Steel",
+      "td3": "Made in India",
+      "td4": "6 mm",
+      "id": 4
+    }
+  ],
+  "shoulder": [
+    {
+      "category": "Shoulder",
+      "title": "Shoulder Press",
+      "description": "Shoulder Press Machine, For Gym",
+      "price": "25500",
+      "discountprice": "19000",
+      "rating": "4.6  ",
+      "image": "/assets/shoulder/shoulderpress.png",
+      "th1": "Machine Type",
+      "th2": "Usage/Application",
+      "th3": "Country of Origin",
+      "th4": "Color",
+      "td1": "Chest And Shoulder Press",
+      "td2": "Gym",
+      "td3": "Made in India",
+      "td4": "Multicolor",
+      "id": 1
+    },
+    {
+      "category": "Shoulder",
+      "title": "Lateral Raise",
+      "description": "Evost A7005 Lateral Raise Machine, For Gym, Size: 1300 X 970 X 1530 mm",
+      "price": "180000",
+      "discountprice": "144000",
+      "rating": "4.4",
+      "image": "/assets/shoulder/lateralraise.png",
+      "th1": "Usage/Application",
+      "th2": "Brand",
+      "th3": "Machine Type",
+      "th4": "Size",
+      "td1": "Gym",
+      "td2": "Evost",
+      "td3": "Lateral Raise Machine",
+      "td4": "1300 x 970 x 1530 mm",
+      "id": 2
+    },
+    {
+      "category": "Shoulder",
+      "title": "Manual Outdoor Shoulder Press",
+      "description": "Manual Outdoor Shoulder Press Machine, Model Name/Number: 9506",
+      "price": "50500",
+      "discountprice": "44500",
+      "rating": "4.5 ",
+      "image": "/assets/shoulder/manual outdoor shoulder press.png",
+      "th1": "Usage/Application",
+      "th2": "Model Name/Number",
+      "th3": "Machine Type",
+      "th4": "Adjustment",
+      "td1": "Outdoor",
+      "td2": "9506",
+      "td3": "Manual",
+      "td4": "According to your height and weight",
+      "id": 3
+    },
+    {
+      "category": "Shoulder",
+      "title": "Delt Pec Fly Machine",
+      "description": "Commercial Energie Fitness LD-807 Rear Delt Pec Fly Machine, For Gym And Household",
+      "price": "66500",
+      "discountprice": "59000",
+      "rating": "4.4",
+      "image": "/assets/shoulder/delt pec fly.png",
+      "th1": "Model Number",
+      "th2": "Usage/Application",
+      "th3": "Weight",
+      "th4": "Color",
+      "td1": "LD-807",
+      "td2": "Gym And Household",
+      "td3": "200 Kg",
+      "td4": "Black And Yellow",
+      "id": 4
+    }
+  ],
+  "treadmill": [
+    {
+      "category": "Treadmill",
+      "title": "Manual Treadmill",
+      "description": "Manual Multi Functional Treadmill",
+      "price": "12500",
+      "discountprice": "11999",
+      "rating": "4.5  ",
+      "image": "/assets/treadmill/manual multi treadmill.png",
+      "th1": "Types Of Treadmill",
+      "th2": "Category",
+      "th3": "Handling Options",
+      "th4": "Color",
+      "td1": "Manual, Folding",
+      "td2": "Heavy Duty Home Use",
+      "td3": "Foldable, Adjustable Incline",
+      "td4": "Ivory",
+      "id": 1
+    },
+    {
+      "category": "Treadmill",
+      "title": "Motorized Treadmill ",
+      "description": "Motorized Treadmill SOLO-500B, For Gym, Model Name/Number: Stairmill",
+      "price": "215000",
+      "discountprice": "175000",
+      "rating": "4. 4",
+      "image": "/assets/treadmill/motorized treadmill.png",
+      "th1": "Usage/Application",
+      "th2": "Maximum User",
+      "th3": "Motor Power",
+      "th4": "Motor Type",
+      "td1": "Gym",
+      "td2": "200 KG",
+      "td3": "7 HPP",
+      "td4": "AC",
+      "id": 2
+    },
+    {
+      "category": "Treadmill",
+      "title": "Medical Treadmill",
+      "description": "2.0 HP AC LW-650 Dyaco Walking Assist Rehab Treadmill for Stroke Patients",
+      "price": "400000",
+      "discountprice": "366000",
+      "rating": "4.7  ",
+      "image": "/assets/treadmill/medical treadmill.png",
+      "th1": "Motor Power",
+      "th2": "Maximum User Weight",
+      "th3": "Motor Type",
+      "th4": "Brand",
+      "td1": "2.0 HP AC",
+      "td2": "180kg",
+      "td3": "AC",
+      "td4": "Dyaco",
+      "id": 3
+    },
+    {
+      "category": "Treadmill",
+      "title": "Commercial Treadmill",
+      "description": "4 HP Energie Fitness ECT-102 Commercial Treadmill, 200 Kgs",
+      "price": "166000",
+      "discountprice": "110000",
+      "rating": "4.5  ",
+      "image": "/assets/treadmill/commercial treadmill.png",
+      "th1": "Motor Power",
+      "th2": "Maximum User Weight",
+      "th3": "Type",
+      "th4": "Motor Type",
+      "td1": "4 HP",
+      "td2": "200 Kgs",
+      "td3": "Automatic",
+      "td4": "AC",
+      "id": 4
+    }
+  ],
+  "addtocart": [
+    {
+      "description": "Manual Outdoor Shoulder Press Machine, Model Name/Number: 9506",
+      "image": "/assets/shoulder/manual outdoor shoulder press.png",
+      "discountprice": "44500",
+      "userid": 5,
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "title": "Forearm Wrist Curl",
+      "description": "Forearm Wrist Curl Machine, For Gym",
+      "image": "/assets/armexercise/forearmwrist.png",
+      "discountprice": "22000",
+      "userid": 7,
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "title": "Lateral Raise",
+      "description": "Evost A7005 Lateral Raise Machine, For Gym, Size: 1300 X 970 X 1530 mm",
+      "image": "/assets/shoulder/lateralraise.png",
+      "discountprice": "144000",
+      "userid": 3,
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "title": "Commercial Multi Gym",
+      "description": "Metal 418BA-Stella Light Commercial Multi Gym",
+      "image": "/assets/gymequipment/multigym.png",
+      "discountprice": "116000",
+      "userid": 3,
+      "quantity": 1,
+      "id": 5
+    }
+  ],
+  "buy": [
+    {
+      "userid": 3,
+      "totalamount": 170000,
+      "address": {
+        "name": "ARUN KUMAR",
+        "email": "karun1902002@gmail.com",
+        "phone": "9361672063",
+        "address": "fghgj",
+        "state": "tamilnadu",
+        "city": "Salem",
+        "pincode": "687678"
+      },
+      "payment": {
+        "nameOnCard": "arun",
+        "cardNumber": "4567890987665443",
+        "cvv": "5678",
+        "expiryDate": "2023-12-14"
+      },
+      "products": [
+        {
+          "productDescription": "Shoulder Press Machine, For Gym",
+          "productPrice": "19000",
+          "quantity": 1
+        },
+        {
+          "productDescription": "Metal 418BA-Stella Light Commercial Multi Gym",
+          "productPrice": "116000",
+          "quantity": 1
+        },
+        {
+          "productDescription": "6 Station Multi Gym, Weight - 180 Kgs",
+          "productPrice": "35000",
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userid": 3,
+      "totalamount": 170000,
+      "address": {
+        "name": "ARUN KUMAR",
+        "email": "karun1902002@gmail.com",
+        "phone": "9361672063",
+        "address": "qwde",
+        "state": "tamilnadu",
+        "city": "Salem",
+        "pincode": "687678"
+      },
+      "payment": {
+        "nameOnCard": "arun",
+        "cardNumber": "1234567891234567",
+        "cvv": "2345",
+        "expiryDate": "2023-12-20"
+      },
+      "products": [
+        {
+          "productDescription": "Shoulder Press Machine, For Gym",
+          "productPrice": "19000",
+          "quantity": 1
+        },
+        {
+          "productDescription": "Metal 418BA-Stella Light Commercial Multi Gym",
+          "productPrice": "116000",
+          "quantity": 1
+        },
+        {
+          "productDescription": "6 Station Multi Gym, Weight - 180 Kgs",
+          "productPrice": "35000",
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    }
+  ]
+}

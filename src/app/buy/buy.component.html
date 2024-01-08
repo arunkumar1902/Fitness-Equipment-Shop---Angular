@@ -1,0 +1,291 @@
+<body>
+  <div *ngIf="loading" class="loading-overlay">
+    Processing...
+  </div>
+
+  <h2 style="text-align: center;margin: 20px;">CheckOut</h2>
+
+  <div class="division">
+    <div class="container">
+
+      <div  class="userdetails">
+
+        <div class="icons">
+          <h3   [ngClass]="{ 'highlight': showDiv1 }">Address</h3><br>
+          <h3   [ngClass]="{ 'highlight': showDiv2 }">Confirm Products</h3><br>
+          <h3   [ngClass]="{ 'highlight': showDiv3 }"> Payment</h3><br>
+        </div>
+
+        <hr>
+
+        <div class="content">
+
+          <div *ngIf="showDiv1" class="addressform">
+            <br>
+
+            <form [formGroup]="addressform"  (ngSubmit)="addressformsubmit()" >
+
+              <div class="forminput">
+
+                <!-- name -->
+                <div class="input">
+                  <label for="name">Name : </label><br>
+                  <input type="text" id="name" placeholder="Enter your name" formControlName="name" />
+
+                  <div *ngIf="addressform.controls['name'].untouched || addressform.controls['name'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['name'].invalid && addressform.controls['name'].touched">
+                    <small *ngIf="addressform.controls['name'].errors?.['required']">Please enter your name</small>
+                    <small *ngIf="addressform.controls['name'].errors?.['pattern']">Must have 2 to 20 characters and Numbers not allowed</small>
+                  </div>
+                </div>
+
+                <!-- email -->
+                <div class="input">
+                  <label for="email">Email : </label><br>
+                  <input type="email" id="email" placeholder="Enter your email ID" formControlName="email"/>
+
+                  <div *ngIf="addressform.controls['email'].untouched || addressform.controls['email'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['email'].invalid && addressform.controls['email'].touched">
+                    <small *ngIf="addressform.controls['email'].errors?.['required']">Please enter your email</small>
+                    <small *ngIf="addressform.controls['email'].errors?.['pattern']">Please enter correct email</small>
+                  </div>
+                </div>
+
+                <!-- phone -->
+                <div class="input">
+                  <label for="phone">Phone : </label><br>
+                  <input  type="tel" id="phone" placeholder="Enter your phone number" formControlName="phone" />
+
+                  <div *ngIf="addressform.controls['phone'].untouched || addressform.controls['phone'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['phone'].invalid && addressform.controls['phone'].touched">
+                    <small *ngIf="addressform.controls['phone'].errors?.['required']">Please enter your phone</small>
+                    <small *ngIf="addressform.controls['phone'].errors?.['pattern']">Please enter 10 digit phone number</small>
+
+                  </div>
+                </div>
+
+                <!-- address -->
+                <div class="input">
+                  <label for="address">Address : </label><br>
+                  <textarea  id="address" rows="1" cols="1" placeholder="Enter your address" formControlName="address"></textarea>
+
+                  <div *ngIf="addressform.controls['address'].untouched || addressform.controls['address'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['address'].invalid && addressform.controls['address'].touched">
+                    <small *ngIf="addressform.controls['address'].errors?.['required']">Please enter your address</small>
+                  </div>
+                </div>
+
+                <!-- state -->
+                <div class="input">
+                  <label for="state">State : </label><br>
+                  <input type="text" id="state" placeholder="Enter your state" formControlName="state" />
+
+                  <div *ngIf="addressform.controls['state'].untouched || addressform.controls['state'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['state'].invalid && addressform.controls['state'].touched">
+                    <small *ngIf="addressform.controls['state'].errors?.['required']">Please enter your state</small>
+                  </div>
+                </div>
+
+                <!-- city -->
+                <div class="input">
+                  <label for="city">City : </label><br>
+                  <input type="text" id="city" placeholder="Enter your city" formControlName="city"/>
+
+                  <div *ngIf="addressform.controls['city'].untouched || addressform.controls['city'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['city'].invalid && addressform.controls['city'].touched">
+                    <small *ngIf="addressform.controls['city'].errors?.['required']">Please enter your City</small>
+                  </div>
+                </div>
+
+                 <!-- pincode -->
+                 <div class="input">
+                  <label for="pincode">Pincode : </label><br>
+                  <input type="text" id="pincode" placeholder="Enter your pincode" formControlName="pincode"/>
+
+                  <div *ngIf="addressform.controls['pincode'].untouched || addressform.controls['pincode'].valid">
+                    <p></p>
+                  </div>
+
+                  <div class="errors" *ngIf="addressform.controls['pincode'].invalid && addressform.controls['pincode'].touched">
+                    <small *ngIf="addressform.controls['pincode'].errors?.['required']">Please enter your pincode</small>
+                    <small *ngIf="addressform.controls['pincode'].errors?.['pattern']">Pincode must be 6 digits number</small>
+                  </div>
+                </div>
+
+              </div>
+
+              <br>
+
+              <div class="submitbutton">
+                <button [disabled]="!addressform.valid" >Submit</button>
+                <span class="cancelorder" (click)="cancelorder()">Cancel</span>
+
+              </div>
+
+            </form>
+          </div>
+
+
+          <div *ngIf="showDiv2"  >
+            <form (ngSubmit)="confirmorder()" >
+              <table>
+                <tr *ngFor="let item of productdetails">
+
+                  <ng-container *ngIf="item.userid == userId;">
+
+                    <td class="cartimage">
+                      <img  src="{{ item.image }}" height="150vh" />
+                    </td>
+
+                    <td class="description">
+                      <p>{{ item.description }}</p>
+
+                      <p>
+                        <i><b>Quantity </b> </i>: {{ item.quantity }}&nbsp;&nbsp;
+                        <i><b>Price </b></i>: {{ item.discountprice * item.quantity | currency : "INR"}}
+                      </p>
+                    </td>
+
+                  </ng-container>
+                </tr>
+              </table>
+              <br>
+
+              <button>Confirm</button>
+              <span class="cancelorder" (click)="cancelorder()">Cancel</span>
+
+            </form>
+
+          </div>
+
+
+
+          <div *ngIf="showDiv3">
+            <form style="width: 70%;" [formGroup]="paymentform" (ngSubmit)="paymentsubmit()">
+
+                <div class="card">
+                  <table>
+                    <br>
+                    <tr>
+                      <td>Name on card</td>
+                      <td>
+                        <input type="text" formControlName="nameOnCard">
+
+                        <div *ngIf="paymentform.controls['nameOnCard'].untouched || paymentform.controls['nameOnCard'].valid">
+                          <p></p>
+                        </div>
+
+                        <div class="errors" *ngIf="paymentform.controls['nameOnCard'].invalid && paymentform.controls['nameOnCard'].touched">
+                          <small *ngIf="paymentform.controls['nameOnCard'].errors?.['required']">Please enter your Name same as in Card</small>
+                          <small *ngIf="paymentform.controls['nameOnCard'].errors?.['pattern']">Must have 2 to 20 characters and Numbers not allowed</small>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <br>
+                    <tr>
+                      <td>Card Number</td>
+                      <td>
+                        <input type="text" formControlName="cardNumber">
+
+                        <div *ngIf="paymentform.controls['cardNumber'].untouched || paymentform.controls['cardNumber'].valid">
+                          <p></p>
+                        </div>
+
+                        <div class="errors" *ngIf="paymentform.controls['cardNumber'].invalid && paymentform.controls['cardNumber'].touched">
+                          <small *ngIf="paymentform.controls['cardNumber'].errors?.['required']">Please enter your Card Number</small>
+                          <small *ngIf="paymentform.controls['cardNumber'].errors?.['pattern']">Card Number must be 16 digits number</small>
+                        </div>
+                      </td>
+                    </tr>
+                    <br>
+                    <tr>
+                      <td>CVV</td>
+                      <td>
+                        <input type="text" formControlName="cvv">
+
+                        <div *ngIf="paymentform.controls['cvv'].untouched || paymentform.controls['cvv'].valid">
+                          <p></p>
+                        </div>
+
+                        <div class="errors" *ngIf="paymentform.controls['cvv'].invalid && paymentform.controls['cvv'].touched">
+                          <small *ngIf="paymentform.controls['cvv'].errors?.['required']">Please enter your CVV</small>
+                          <small *ngIf="paymentform.controls['cvv'].errors?.['pattern']">CVV must be 3 or 4 numbers</small>
+                        </div>
+                      </td>
+                    </tr>
+                    <br>
+
+                    <tr>
+                      <td>Expiry Date</td>
+                      <td><input type="date" formControlName="expiryDate"></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <div class="finalpayment">
+                    <button [disabled]="!paymentform.valid">Proceed to Pay {{ totalAmount | currency : "INR" }}</button>
+                    <span class="cancelorder" (click)="cancelorder()">Cancel</span>
+                  </div>
+
+                </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="productdetails">
+        <span>
+          You will still have a chance to review and edit your order before the Payment.
+        </span>
+        <br />
+        <br />
+        <hr />
+        <br />
+
+        <h3>Order Summary</h3>
+        <br />
+
+        <div class="ordersummary">
+          <p>Price</p>
+          <p>{{ totalAmount | currency : "INR" }}</p>
+        </div>
+
+        <div class="ordersummary">
+          <p>Delivery</p>
+          <p>{{ 0 | currency : "INR" }}</p>
+        </div>
+
+        <hr />
+        <div class="ordersummary">
+          <h3 style="color: rgb(249, 29, 29);">Order Total</h3>
+          <p>{{ totalAmount | currency : "INR" }}</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+

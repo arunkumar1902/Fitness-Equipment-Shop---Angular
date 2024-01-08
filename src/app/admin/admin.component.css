@@ -1,0 +1,86 @@
+.add{
+  display: flex;
+}
+.addproduct{
+  margin: 1.7%;
+  border: 1px solid silver;
+  border-radius: 20px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(84, 89, 94);
+}
+
+
+ table{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-collapse: collapse;
+}
+ th{
+  font-size: larger;
+  color: rgb(2, 2, 132);
+  padding: 15px;
+}
+ th, td{
+  border: 1px solid silver;
+}
+.cartimage img{
+  height: 10vh;
+}
+.description{
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+}
+.description a{
+  color: black;
+  font-weight: lighter;
+  text-decoration: none;
+}
+.description a:hover{
+  color: orangered;
+}
+button{
+  cursor: pointer;
+}
+.fa-trash{
+  cursor: pointer;
+  color: black;
+}
+.fa-trash:hover{
+  color: orangered;
+}
+h2{
+  margin: 2%;
+}
+.main{
+  display: flex;
+  justify-content: center;
+}
+.products{
+  width: 95%;
+}
+
+@media(max-width:900px){
+  .products{
+    width: 100%;
+    padding: 10px;
+  }
+  .description a{
+    font-size: medium;
+  }
+  h2{
+    margin: 1%;
+    font-size: larger;
+  }
+  .addproduct{
+    margin: 1%;
+    width: 20%;
+    height: 3vh;
+  }
+}

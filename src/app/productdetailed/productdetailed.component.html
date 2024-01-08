@@ -1,0 +1,59 @@
+  <body>
+    <div class="div1">
+      <div class="back">
+        <a routerLink="/{{ finalProduct.category | lowercase}}">{{finalProduct.category}}</a>
+        / <a>{{ finalProduct.title }}</a>
+      </div>
+
+      <br>
+      <br />
+
+      <div class="product">
+        <div class="product-details">
+          <div class="image">
+            <img src="{{ finalProduct.image }}" />
+          </div>
+
+          <div class="details">
+            <h2>{{ finalProduct.description }}</h2> <br>
+
+            <table>
+              <tr>
+                <th>{{ finalProduct.th1 }}</th>
+                <td>{{ finalProduct.td1 }}</td>
+              </tr>
+              <tr>
+                <th>{{ finalProduct.th2 }}</th>
+                <td>{{ finalProduct.td2 }}</td>
+              </tr>
+              <tr>
+                <th>{{ finalProduct.th3 }}</th>
+                <td>{{ finalProduct.td3 }}</td>
+              </tr>
+              <tr>
+                <th>{{ finalProduct.th4 }}</th>
+                <td>{{ finalProduct.td4 }}</td>
+              </tr>
+            </table><br>
+
+            <p>
+              Price:&nbsp;
+              <del>{{ finalProduct.price | currency:'INR'}}</del>&nbsp;
+              <ins class="price">{{ finalProduct.discountprice| currency:'INR' }}</ins>
+            </p>
+
+            <p>
+              Rating:&nbsp;{{ finalProduct.rating }} / 5
+              <span class="fa fa-star"></span>
+            </p>
+
+            <div class="button">
+              <a class="addtocart" (click)="addtocart()">Add to cart</a>
+              <!-- <a  class="buy">Buy Now</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>

@@ -1,0 +1,148 @@
+h2{
+  margin: 3%;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.main{
+  display: flex;
+  justify-content: center;
+}
+.products{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 95%;
+}
+.equipments{
+  width: 85%;
+  padding: 20px;
+  margin: 3px;
+  border: 1px solid silver;
+  border-radius: 20px;
+}
+
+.equipments:hover{
+  box-shadow: 10px 5px 10px 5px silver;
+  border: 2px solid silver;
+}
+.heading{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.heading h3{
+  font-size: larger;
+}
+.rating{
+  font-size: small;
+}
+.heading .fa-star{
+  padding: 1px;
+  color: yellow;
+  background-color: blue;
+}
+.equipment-image img{
+  width: 100%;
+}
+.equipment-content a{
+  color: rgb(33, 81, 144);
+  text-decoration: none;
+}
+.equipment-content a:hover{
+  color: orangered;
+}
+.price{
+  text-decoration: none;
+  font-size: larger;
+}
+
+/* silde */
+
+.slider{
+  padding-top: 15px;
+}
+.imagediv {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+}
+.imagediv img {
+  position: absolute;
+  width: 100%;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.imagediv img.image-active {
+  position: relative;
+  opacity: 1;
+  /* Show current image */
+}
+.bottomdotdiv {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 5px;
+  background-color: rgb(255, 233, 233);
+  border-radius: 50px;
+  transition: opacity 0.6s ease;
+  opacity: 0.5;
+}
+.active, .dot:hover {
+  opacity: 1;
+}
+.buttonclass {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  background: none;
+  font-size: 25px;
+  border: none;
+}
+.buttonclass i{
+  cursor: pointer;
+}
+.next {
+  right: 0;
+}
+.icon {
+  color: white;
+  opacity: 0.5;
+}
+.icon:hover {
+  color: white;
+  opacity: 0.9;
+}
+@media (max-width:1300px){
+  .products{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width:1000px){
+  .products{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width:600px){
+  .products{
+      display: flex;
+      flex-direction: column;
+  }
+  .equipments{
+    width: 75%;
+  }
+}

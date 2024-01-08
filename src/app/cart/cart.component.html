@@ -1,0 +1,98 @@
+<p class="title">My Cart </p>
+
+<div *ngIf="isCartEmpty" class="container">
+
+  <div class="emptycart">
+    <img src="/assets/emptycart.jpg">
+    <br>
+    <p class="text">Your cart is empty.</p>
+    <br>
+
+    <a routerLink="/home">Back to purchase</a>
+    <br>
+    <br><br>
+  </div>
+
+</div>
+
+<div class="cartdiv1" *ngIf="!isCartEmpty">
+
+  <div class="cartdiv2">
+    <table >
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of cartproducts">
+          <ng-container *ngIf="item.userid == userId;">
+            <td class="cartimage">
+              <img routerLink="/product/{{ item.title }}" src="{{ item.image }}" height="150vh" />
+            </td>
+
+            <td class="description">
+              <h3 routerLink="/product/{{ item.title }}">{{ item.description }}</h3>
+              <br>
+              Quantity :
+              <button (click)="decrementQuantity(item)">-</button>
+              {{ item.quantity }}
+              <button (click)="incrementQuantity(item)">+</button>
+
+            </td>
+
+            <td>
+              <p>{{ item.discountprice * item.quantity | currency : "INR"}}</p>
+            </td>
+
+            <td>
+              <p  class="trash"><span class="fa fa-trash" (click)="deletecartproducts(item.id)"></span></p>
+            </td>
+          </ng-container>
+        </tr>
+        <br />
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+  <div class="cartdiv3">
+
+    <h3>Total Amount </h3>
+    <br>
+    <hr>
+    <br>
+
+    <div class="amount">
+      <h4>Total Product Price</h4>
+      <p>{{ totalAmount | currency : "INR" }}</p>
+    </div>
+    <br>
+
+    <div class="amount">
+      <h4>Delivery Bill</h4>
+      <p style="color: rgb(15, 179, 15);">Free delivery</p>
+    </div>
+
+    <br><hr>
+    <br>
+
+    <div class="total">
+      <p style="text-align: right;">Total : &nbsp;&nbsp;{{ totalAmount | currency : "INR" }}
+      </p>
+    </div>
+    <br><hr>
+
+
+    <br>
+
+    <div class="buy">
+      <button routerLink="/buy" >Buy</button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,117 @@
+h1 {
+  text-align: center;
+}
+
+.division {
+  /* background: url("https://img.freepik.com/free-vector/people-exercising-fitness-gym-room-with-sport-equipment-workouts-woman-men-training-treadmill-bike-lifting-dumbbells-healthy-lifestyle_575670-1883.jpg") no-repeat;
+  background-size: cover; */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.register_div {
+  background-color: rgba(215, 217, 219, 0.848);
+  border: 1px solid;
+  border-radius: 30px;
+  padding: 20px;
+  width: 50%;
+}
+
+.forminput {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+form div {
+  padding: 1%;
+}
+
+label {
+  font-size: larger;
+}
+
+input {
+  border: 1px solid silver;
+  padding: 10px;
+  width: 85%;
+  border-radius: 5px;
+}
+
+textarea {
+  border: 1px solid silver;
+  padding: 10px;
+  width: 85%;
+  border-radius: 5px;
+}
+
+.regbutton {
+  text-align: center;
+}
+
+button {
+  font-size: larger;
+  color: rgb(255, 255, 255);
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(87, 87, 164);
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(85, 98, 234);
+}
+
+.for_login {
+  text-align: center;
+  font-size: larger;
+}
+
+.for_login a {
+  color: rgba(55, 106, 226, 0.923);
+  text-decoration: none;
+}
+
+.for_login a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* validation */
+input.ng-touched.ng-invalid{
+  border: 1px solid red;
+}
+
+input.ng-touched.ng-valid {
+  border: 1px solid green;
+}
+textarea.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+textarea.ng-touched.ng-valid {
+  border: 1px solid green;
+}
+.errors{
+  width: 90%;
+  color: red;
+  font-size: large;
+}
+.input p{
+  padding: 10px;
+}
+@media (max-width:900px){
+  .register_div{
+    width: 70%;
+  }
+}
+@media (max-width:500px){
+  .register_div{
+    width: 80%;
+  }
+}

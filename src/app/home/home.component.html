@@ -1,0 +1,65 @@
+<body>
+<div class="slider">
+
+  <div *ngIf="images && images.length > 0" class="imagediv">
+
+    <img *ngFor="let image of images; let i=index" [src]="image.imageSrc" [ngClass]="{'image-active':selectedIndex === i}">
+
+    <div *ngIf="indicators" class="bottomdotdiv">
+      <span *ngFor="let dot of images; let i = index" class="dot" [ngClass]="{'active': selectedIndex === i}" (click)="selectImage(i)"></span>
+    </div>
+
+    <button *ngIf="controls" class="buttonclass prev">
+      <i class="fa fa-chevron-left icon" (click)="onPrevClick()"></i>
+    </button>
+
+    <button *ngIf="controls" class="buttonclass next">
+      <i class="fa fa-chevron-right icon" (click)="onNextClick()"></i>
+    </button>
+
+  </div>
+</div>
+
+
+
+  <h2>New Arrivals</h2>
+
+  <div class="main">
+
+    <div class="products">
+
+      <div class="equipments" *ngFor="let item of products">
+
+        <div class="equipment-image" >
+          <div class="heading">
+            <h3>{{item.title}}</h3>
+            <p class="rating">{{item.rating}} / 5 &nbsp;<span class="fa fa-star"></span></p>
+          </div>
+
+          <a routerLink="/product/{{item.title}}">
+            <img src={{item.image}} />
+          </a>
+        </div>
+
+        <br />
+
+        <div class="equipment-content">
+          <a routerLink="/product/{{item.title}}">
+            <b>{{item.description}}</b>
+          </a>
+          <br /><br />
+          <p>
+            Price: <del>{{item.price | currency : "INR"}}</del>&nbsp;
+            <ins class="price">{{item.discountprice  | currency : "INR"}}</ins>
+          </p>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</body>

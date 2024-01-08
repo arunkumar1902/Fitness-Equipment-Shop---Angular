@@ -1,0 +1,213 @@
+<body>
+  <div class="add">
+    <h2>Add Products : </h2>
+    <a routerLink="/addproduct" class="addproduct">
+      <i class="fa fa-plus"></i>
+    </a>
+  </div>
+
+  <!-- gymequipment -->
+
+  <div class="adminaddproducts">
+    <h2>Gym Equipment</h2>
+    <div class="main">
+      <div class="products">
+
+        <table >
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Delete</th>
+              <th>Edit</th>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of gymequipment">
+              <ng-container >
+                <td class="cartimage">
+                  <a routerLink="/product/{{ item.title }}">
+                  <img src="{{ item.image }}" height="150vh" /></a>
+                </td>
+
+                <td class="description">
+                  <h3 ><a routerLink="/product/{{ item.title }}">{{ item.description }}</a></h3>
+                </td>
+
+                <td>
+                  <p>{{ item.discountprice | currency : "INR" }}</p>
+                </td>
+
+                <td>
+                  <p (click)="deletegymequipment(item.id)"><i class="fa fa-trash"></i></p>
+                </td>
+
+                <td>
+                  <button routerLink="/editgymequipment/{{item.id}}">Edit</button>
+                </td>
+              </ng-container>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- treadmill -->
+
+  <div class="adminaddproducts">
+    <h2>Treadmill</h2>
+    <div class="main">
+      <div class="products">
+
+        <table >
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Delete</th>
+              <th>Edit</th>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of treadmill;">
+              <ng-container >
+                <td class="cartimage">
+                  <a routerLink="/product/{{ item.title }}">
+                  <img src="{{ item.image }}" height="150vh" /></a>
+                </td>
+
+                <td class="description">
+                  <h3 ><a routerLink="/product/{{ item.title }}">{{ item.description }}</a></h3>
+                </td>
+
+                <td>
+                  <p>{{ item.discountprice | currency : "INR" }}</p>
+                </td>
+
+                <td>
+                  <p (click)="deletetreadmill(item.id)"><i class="fa fa-trash"></i></p>
+                </td>
+
+                <td>
+                  <button routerLink="/edittreadmill/{{item.id}}">Edit</button>
+                </td>
+              </ng-container>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- armexercise -->
+
+  <div class="adminaddproducts">
+    <h2>Armexercise</h2>
+    <div class="main">
+      <div class="products">
+        <table >
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Delete</th>
+              <th>Edit</th>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of armexercise;">
+              <ng-container >
+                <td class="cartimage">
+                  <a routerLink="/product/{{ item.title }}">
+                  <img src="{{ item.image }}" height="150vh" /></a>
+                </td>
+
+                <td class="description">
+                  <h3 ><a routerLink="/product/{{ item.title }}">{{ item.description }}</a></h3>
+                </td>
+
+                <td>
+                  <p>{{ item.discountprice | currency : "INR" }}</p>
+                </td>
+
+                <td>
+                  <p (click)="deletearmexercise(item.id)"><i class="fa fa-trash"></i></p>
+                </td>
+
+                <td>
+                  <button routerLink="/editarmexercise/{{item.id}}">Edit</button>
+                </td>
+              </ng-container>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shoulder -->
+
+  <div class="adminaddproducts">
+    <h2>Shoulder</h2>
+    <div class="main">
+      <div class="products">
+
+        <table >
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Delete</th>
+              <th>Edit</th>
+
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of shoulder;">
+              <ng-container >
+                <td class="cartimage">
+                  <a routerLink="/product/{{ item.title }}">
+                  <img src="{{ item.image }}" height="150vh" /></a>
+                </td>
+
+                <td class="description">
+                  <h3 ><a routerLink="/product/{{ item.title }}">{{ item.description }}</a></h3>
+                </td>
+
+                <td>
+                  <p>{{ item.discountprice | currency : "INR" }}</p>
+                </td>
+
+                <td>
+                  <p (click)="deleteshoulder(item.id)"><i class="fa fa-trash"></i></p>
+                </td>
+
+                <td>
+                  <button routerLink="/editshoulder/{{item.id}}">Edit</button>
+                </td>
+              </ng-container>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

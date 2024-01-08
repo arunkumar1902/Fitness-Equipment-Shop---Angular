@@ -1,0 +1,101 @@
+<div class="addproductdiv1">
+  <div class="addproductdiv2">
+
+    <h1 style="color: #444197">Update Product</h1>
+    <br>
+
+    <form >
+      <div class="formdivision">
+        <div class="formleft">
+          <h3>Product details</h3>
+          <br>
+
+          <!-- title -->
+          <div class="input">
+            <label for="title">Product Title </label>
+            <input type="text" id="title" [(ngModel)]="product.title" name="title" #title="ngModel"ngModel />
+          </div>
+
+          <!-- description -->
+          <div class="input">
+            <label for="description">Product Description </label>
+            <input type="text" id="description" [(ngModel)]="product.description" name="description" #description="ngModel"ngModel />
+          </div>
+
+          <!-- rating -->
+          <div class="input">
+            <label for="rating">Product Rating </label>
+            <input type="text" id="rating" [(ngModel)]="product.rating" name="rating" #rating="ngModel"ngModel />
+          </div>
+
+          <!-- imagepath -->
+          <div class="input">
+            <label for="image">Product image path </label>
+            <input type="text" id="image" [(ngModel)]="product.image" name="image" #image="ngModel"ngModel />
+          </div>
+        </div>
+
+        <div class="formmiddle">
+          <h3>Product table head details</h3>
+          <br />
+          <!-- table head -->
+          <div class="input">
+            <label for="th1">Table Head 1 </label>
+            <input type="text" id="th1" [(ngModel)]="product.th1" name="th1" #th1="ngModel"ngModel />
+          </div>
+          <div class="input">
+            <label for="th2">Table Head 2 </label>
+            <input type="text" id="th2" [(ngModel)]="product.th2" name="th2" #th2="ngModel"ngModel />
+          </div>
+          <div class="input">
+            <label for="th3">Table Head 3 </label>
+            <input type="text" id="th3" [(ngModel)]="product.th3" name="th3" #th3="ngModel"ngModel />
+          </div>
+          <div class="input">
+            <label for="th4">Table Head 4 </label>
+            <input type="text" id="th4" [(ngModel)]="product.th4" name="th4" #th4="ngModel"ngModel />
+          </div>
+
+          <!-- price -->
+          <div class="input">
+            <label for="price">Product Price </label>
+            <input type="text" id="price" [(ngModel)]="product.price" name="price" #price="ngModel"ngModel />
+          </div>
+        </div>
+
+        <div class="formright">
+          <h3>Product table data details</h3>
+          <br />
+          <!-- table data -->
+          <div class="input">
+            <label for="td1">Table Data 1 </label>
+            <input type="text" id="td1" [(ngModel)]="product.td1" name="td1" #td1="ngModel"ngModel />
+          </div>
+          <div class="input">
+            <label for="td2">Table Data 2 </label>
+            <input type="text" id="td2" [(ngModel)]="product.td2" name="td2" #td2="ngModel"ngModel />
+          </div>
+          <div class="input">
+            <label for="td3">Table Data 3 </label>
+            <input type="text" id="td3" [(ngModel)]="product.td3" name="td3" #td3="ngModel"ngModel />
+          </div>
+          <div class="input">
+            <label for="td4">Table Data 4 </label>
+            <input type="text" id="td4" [(ngModel)]="product.td4" name="td4" #td4="ngModel"ngModel />
+          </div>
+
+          <!-- discountprice -->
+          <div class="input">
+            <label for="discountprice">Discountprice </label>
+            <input type="text"  id="discountprice"  [(ngModel)]="product.discountprice" name="discountprice" #discountprice="ngModel"ngModel/>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="button">
+        <button (click)="update()">Update</button>
+      </div>
+    </form>
+  </div>
+
+</div>

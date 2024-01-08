@@ -1,0 +1,120 @@
+<body>
+  <!-- Header navigation  -->
+
+  <nav>
+
+    <div class="logo">
+      <a routerLink="/"><img src="/assets/logo.png" /></a>
+      <h2>Fitness Zone</h2>
+    </div>
+
+    <div class="navigation">
+
+      <a routerLink="admin" *ngIf="slogin.isadmin()">Admin</a>
+
+      <a routerLink="home" id="home" >Home</a>
+
+      <a class="dropdown">Products
+        <div class="dropdown-content" >
+          <a routerLink="/armexercise">Arm&nbsp;Exercise</a><br><br>
+          <a routerLink="/gymequipment">Gym&nbsp;Equipment</a><br><br>
+          <a routerLink="/shoulder">Shoulder&nbsp;Exercise</a><br><br>
+          <a routerLink="/treadmill">Exercise&nbsp;Treadmill</a>
+        </div>
+      </a>
+
+      <a routerLink="cart" class="fa fa-shopping-cart" *ngIf="!slogin.isadmin()"></a>
+
+      <a routerLink="login" *ngIf="!slogin.islogin()" id="login">Login</a>
+
+      <button *ngIf="slogin.islogin()" class="profilediv" (click)="buttonclick()">
+
+        <i class="fa fa-user"></i>
+
+        <div class="profile" *ngIf="displaydiv()">
+          <p>{{ slogin.getdetails()["name"] }}</p>
+          <br />
+          <button (click)="logout()">Logout</button>
+        </div>
+
+      </button>
+
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+
+  <!-- footer -->
+  <footer>
+
+    <div class="footer">
+      <div class="div2">
+        <div class="copyright">
+          <hr>
+          <br>
+        </div>
+      </div>
+
+      <div class="div1">
+
+        <div class="details about">
+          <h3>About</h3>
+          <p>
+            Welcome to our Fitness Equipment online website! We offer
+            top-quality equipment and exceptional customer service to help you
+            achieve your fitness goals. Whether you are just starting out or a
+            seasoned fitness enthusiast, our team of experts is here to support
+            you.
+            <br><br>
+            Thank you for choosing us!
+          </p>
+        </div>
+
+
+        <div class="details">
+          <h3>Quick Links</h3>
+          <p>
+            <a href="#home">Home</a>
+            <a routerLink="/armexercise">Arm&nbsp;Exercise</a>
+            <a routerLink="/gymequipment">Gym&nbsp;Equipment</a>
+            <a routerLink="/shoulder">Shoulder&nbsp;Exercise</a>
+            <a routerLink="/treadmill">Exercise&nbsp;Treadmill</a>
+          </p>
+        </div>
+
+        <div class="details">
+          <h3>Contact Us</h3>
+          <p>
+            <span class="fa fa-phone">&emsp;+91 9361672063</span>
+            <br /><br />
+            <span class="fa fa-envelope">&emsp;kumar1902002@gmail.com</span>
+          </p>
+        </div>
+
+        <div class="details">
+          <h3>Follow Us</h3>
+          <div class="social">
+            <p>
+              <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="div2">
+        <div class="copyright">
+          <hr>
+          <br>
+          <h3>Copyright © 2023 All Rights Reserved by Fitness Zone</h3>
+          <br>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+</body>

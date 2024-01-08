@@ -1,0 +1,116 @@
+<div class="addproductdiv1">
+  <div class="addproductdiv2">
+    <h1 style="color: #444197">Add Product</h1>
+    <br>
+
+    <form [formGroup]="addproduct" (ngSubmit)="submitForm()">
+      <div class="formdivision">
+        <div class="formleft">
+          <h3>Product details</h3>
+          <br>
+
+
+          <!-- Product category -->
+          <div class="input">
+            <label for="category">Product Category <i>*</i></label>
+            <select id="category" name="category" formControlName="category">
+              <option value="Gymequipment">Gym Equipment</option>
+              <option value="Treadmill">Treadmill</option>
+              <option value="Armexercise">Arm Exercise</option>
+              <option value="Shoulder">Shoulder</option>
+            </select>
+          </div>
+
+          <!-- title -->
+          <div class="input">
+            <label for="title">Product Title <i>*</i></label>
+            <input type="text" id="title" formControlName="title" />
+          </div>
+
+          <!-- description -->
+          <div class="input">
+            <label for="description">Product Description <i>*</i></label>
+            <input type="text" id="description" formControlName="description" />
+          </div>
+
+          <!-- rating -->
+          <div class="input">
+            <label for="rating">Product Rating <i>*</i></label>
+            <input type="text" id="rating" formControlName="rating" />
+          </div>
+
+          <!-- imagepath -->
+          <div class="input">
+            <label for="image">Product image path <i>*</i></label>
+            <input type="text" id="image" formControlName="image" />
+          </div>
+        </div>
+
+        <div class="formmiddle">
+          <h3>Product table head details</h3>
+          <br />
+          <!-- table head -->
+          <div class="input">
+            <label for="th1">Table Head 1 <i>*</i></label>
+            <input type="text" id="th1" formControlName="th1" />
+          </div>
+          <div class="input">
+            <label for="th2">Table Head 2 <i>*</i></label>
+            <input type="text" id="th2" formControlName="th2" />
+          </div>
+          <div class="input">
+            <label for="th3">Table Head 3 <i>*</i></label>
+            <input type="text" id="th3" formControlName="th3" />
+          </div>
+          <div class="input">
+            <label for="th4">Table Head 4 <i>*</i></label>
+            <input type="text" id="th4" formControlName="th4" />
+          </div>
+
+          <!-- price -->
+          <div class="input">
+            <label for="price">Product Price <i>*</i></label>
+            <input type="text" id="price" formControlName="price" />
+          </div>
+        </div>
+
+        <div class="formright">
+          <h3>Product table data details</h3>
+          <br />
+          <!-- table data -->
+          <div class="input">
+            <label for="td1">Table Data 1 <i>*</i></label>
+            <input type="text" id="td1" formControlName="td1" />
+          </div>
+          <div class="input">
+            <label for="td2">Table Data 2 <i>*</i></label>
+            <input type="text" id="td2" formControlName="td2" />
+          </div>
+          <div class="input">
+            <label for="td3">Table Data 3 <i>*</i></label>
+            <input type="text" id="td3" formControlName="td3" />
+          </div>
+          <div class="input">
+            <label for="td3">Table Data 4 <i>*</i></label>
+            <input type="text" id="td3" formControlName="td4" />
+          </div>
+
+          <!-- discountprice -->
+          <div class="input">
+            <label for="discountprice">Discountprice <i>*</i></label>
+            <input
+              type="text"
+              id="discountprice"
+              formControlName="discountprice"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="button">
+        <button [disabled]="!this.addproduct.valid">Add</button>
+      </div>
+    </form>
+  </div>
+
+</div>

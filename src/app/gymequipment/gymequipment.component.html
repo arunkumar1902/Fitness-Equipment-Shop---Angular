@@ -1,0 +1,40 @@
+  <body>
+
+    <div class="back">
+      <br>
+      <br>
+      <a routerLink="/gymequipment">Gym Equipment</a>
+    </div>
+    <div class="products">
+
+      <div class="equipments" *ngFor="let item of productList">
+        <div class="equipment-image">
+          <div class="heading">
+            <h3>{{ item.title }}</h3>
+            <p class="rating">
+              {{ item.rating }} / 5 &nbsp;<span class="fa fa-star"></span>
+            </p>
+          </div>
+
+          <a routerLink="/product/{{ item.title }}">
+            <img src="{{ item.image }}" />
+          </a>
+        </div>
+
+        <br />
+
+        <div class="equipment-content">
+          <a routerLink="/product/{{ item.title }}">
+            <b>{{ item.description }}</b>
+          </a>
+          <br /><br />
+          <p class="productprice">
+            Price:
+            <del>{{ item.price | currency:'INR'}}</del>&nbsp;
+            <ins class="price">{{ item.discountprice | currency:'INR'}}</ins>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
